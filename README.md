@@ -1,1 +1,1 @@
-# pok-doro
+# pokédoro
