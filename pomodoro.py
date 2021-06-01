@@ -2,6 +2,7 @@ import time
 import os
 import requests
 import random
+import progress as wait
 from playsound import playsound
 
 def study():
@@ -17,7 +18,7 @@ def study():
 			print("Starting timer now.")
 			playsound("clock_start.wav")
 			is_invalid = True
-			time.sleep(25*min)
+			wait.progress(25)
 			os.startfile(img)
 			playsound("ding.wav")
 			time.sleep(1)
@@ -43,7 +44,7 @@ def short_break():
 			print("5 minute break is now starting.")
 			playsound("clock_start.wav")
 			is_invalid = True
-			time.sleep(5*min)
+			wait.progress(5)
 			playsound("ding.wav")
 			os.startfile(img)
 			time.sleep(1)
@@ -67,7 +68,7 @@ def long_break():
 			print("15 minute break is now starting.")
 			playsound("clock_start.wav")
 			is_invalid = True
-			time.sleep(15*min)
+			wait.progress(15)
 			playsound("ding.wav")
 			os.startfile(img)
 			time.sleep(1)
